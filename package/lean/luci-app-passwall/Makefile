@@ -59,11 +59,11 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_pdnsd
 	
 config PACKAGE_$(PKG_NAME)_INCLUDE_dns2socks
 	bool "Include dns2socks"
-	default n
+	default y
 	
 config PACKAGE_$(PKG_NAME)_INCLUDE_dns-forwarder
 	bool "Include dns-forwarder"
-	default n
+	default y
 
 endmenu
 endef
