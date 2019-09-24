@@ -18,6 +18,8 @@ PKG_CONFIG_DEPENDS:= CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_ChinaDNS \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_dnscrypt_proxy \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_dnsforwarder \
+	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_udp2raw-tunnel \
+	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_udpspeeder \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_haproxy
 
 include $(INCLUDE_DIR)/package.mk
@@ -79,6 +81,14 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_dnsforwarder
 	bool "dnsforwarder"
 	default n
 
+config PACKAGE_$(PKG_NAME)_INCLUDE_udp2raw-tunnel
+	bool "udp2raw-tunnel"
+	default n
+	
+config PACKAGE_$(PKG_NAME)_INCLUDE_udpspeeder
+	bool "udpspeeder"
+	default n	
+
 config PACKAGE_$(PKG_NAME)_INCLUDE_haproxy
 	bool "haproxy"
 	default n
@@ -106,6 +116,8 @@ define Package/luci-app-ssr-plus-jo
 	+PACKAGE_$(PKG_NAME)_INCLUDE_ChinaDNS:ChinaDNS \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_dnscrypt_proxy:dnscrypt-proxy-full \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_dnsforwarder:dnsforwarder \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_udp2raw-tunnel:udp2raw-tunnel \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_udpspeeder:udpspeeder \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_haproxy:haproxy
 endef
 
