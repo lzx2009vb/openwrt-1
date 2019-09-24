@@ -103,9 +103,9 @@ define Package/luci-app-ssr-plus-jo
         +PACKAGE_$(PKG_NAME)_INCLUDE_simple-obfs:simple-obfs \
         +PACKAGE_$(PKG_NAME)_INCLUDE_simple-obfs-server:simple-obfs-server \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks_V2Ray:v2ray-plugin \
-	+PACKAGE_$(PKG_NAME)_INCLUDE_ChinaDNS:openwrt_chinadns \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_ChinaDNS:ChinaDNS \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_dnscrypt_proxy:dnscrypt-proxy-full \
-	+PACKAGE_$(PKG_NAME)_INCLUDE_dnsforwarder:openwrt-dnsforwarder \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_dnsforwarder:dnsforwarder \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_haproxy:haproxy
 endef
 
