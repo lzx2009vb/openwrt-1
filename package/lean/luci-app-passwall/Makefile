@@ -51,7 +51,7 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_haproxy
 	
 config PACKAGE_$(PKG_NAME)_INCLUDE_ChinaDNS
 	bool "Include ChinaDNS"
-	default y
+	default n
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_pdnsd
 	bool "Include pdnsd"
