@@ -9,13 +9,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=firewall
-PKG_RELEASE:=1
+PKG_RELEASE:=5
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL=$(PROJECT_GIT)/project/firewall3.git
-PKG_SOURCE_DATE:=2019-09-18
-PKG_SOURCE_VERSION:=383eb58f1750b3b96a82558b5dcb806a8a2528bc
-PKG_MIRROR_HASH:=eb589a8b8f0c24920221ca79367940ce735548539b9ae685477138be6c5eed89
+PKG_SOURCE_DATE:=2019-01-02
+PKG_SOURCE_VERSION:=70f8785b9ee364828e9a0f38275283024df621c2
+PKG_MIRROR_HASH:=0b1a7c88b3c3474127b5e5e61d5bf58345d02862d98c56e049face2ddd81bc88
 PKG_MAINTAINER:=Jo-Philipp Wich <jo@mein.io>
 PKG_LICENSE:=ISC
 
@@ -28,7 +28,7 @@ define Package/firewall
   SECTION:=net
   CATEGORY:=Base system
   TITLE:=OpenWrt C Firewall
-  DEPENDS:=+libubox +libubus +libuci +libip4tc +IPV6:libip6tc +libxtables +kmod-ipt-core +kmod-ipt-conntrack +IPV6:kmod-nf-conntrack6 +kmod-ipt-nat
+  DEPENDS:=+libubox +libubus +libuci +libip4tc +IPV6:libip6tc +libxtables +kmod-ipt-core +kmod-ipt-conntrack +IPV6:kmod-nf-conntrack6 +kmod-ipt-nat +iptables-mod-fullconenat
 endef
 
 define Package/firewall/description
